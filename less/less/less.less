@@ -1,0 +1,140 @@
+/*用于绘画的canvas元素
+
+**********************************
+media:    媒介/媒体
+             sizing:   定性
+             large:    大
+             small:    小
+             response: 响应
+             less:     较少
+             node:     节点
+             scope：   范围
+             ***********************************
+@media  screen  and (min-width:500px){};
+
+*{
+  box-sizing:border-box;        让边框包含在内容中
+box-sizing:content-box;       默认
+}
+
+*栅格化
+col:列  s:small
+col-s-1
+ls      cd?
+node.js
+npm install -g less
+dir        查看目录
+cd+文件名  进入文件夹
+cd..       后退一个文件
+lessc      编译less文件*/
+
+@import "var.less";
+*{
+  box-sizing: border-box;
+}
+.container{
+  &{
+    margin:auto;
+    width:@num1*1px-300px;
+  }
+  &-fuild{
+    width: 100%;
+  }
+  &>.row{
+    width:100%;height:auto;
+    .clearfix
+  }
+  &-fuild>.row{
+    width:100%;height:auto;
+    .clearfix
+  }
+
+}
+
+
+.loop(@type:s,@i:1) when (@i<=@colNum){
+  .container>.row>.col-@{type}-@{i}{
+    width:@i/@colNum*100%;
+    float:left;
+  }
+  .container-fuild>.row>.col-@{type}-@{i}{
+    width:@i/@colNum*100%;
+    float:left;
+  }
+  .loop(@type,@i+1)
+}
+/*小屏*/
+.loop();
+.container>.row>.col-s-hide{
+  display: none;
+}
+.container-fuild>.row>.col-s-hide{
+  display: none;
+}
+/*中屏*/
+@media screen and (min-width: @num1){
+  .container{
+    width:@num1;
+  }
+  .loop(m);
+  .container>.row>.col-s-hide{
+    display: block;
+  }
+  .container>.row>.col-l-hide{
+    display: block;
+  }
+  .container>.row>.col-m-hide{
+    display: none;
+  }
+
+  .container-fuild>.row>.col-s-hide{
+    display: block;
+  }
+  .container-fuild>.row>.col-l-hide{
+    display: block;
+  }
+  .container-fuild>.row>.col-m-hide{
+    display: none;
+  }
+}
+/*大屏
+@media screen and (min-width: @num2){
+  .container{
+    width:@num2;
+  }
+  .loop(l);
+
+  .container>.row>.col-s-hide{
+    display: block;
+  }
+  .container>.row>.col-m-hide{
+    display: block;
+  }
+  .container>.row>.col-l-hide{
+    display: none;
+  }
+
+  .container-fuild>.row>.col-s-hide{
+    display: block;
+  }
+  .container-fuild>.row>.col-m-hide{
+    display: block;
+  }
+  .container-fuild>.row>.col-l-hide{
+    display: none;
+  }
+}
+*/
+
+
+.clearfix(){
+  &:before,&:after{
+    content:"";
+    display: block;
+    clear:both;
+  }
+}
+
+
+
+

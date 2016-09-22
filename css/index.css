@@ -1,0 +1,476 @@
+/*背景图*/
+#fullpage{
+    width: 100%;
+    height: 100%;
+    /*overflow: hidden;*/
+}
+/*#fullpage .bgBox{
+    width: 100%;
+    height: 400%;
+}*/
+/*#fullpage .bgBox .section{
+    width:100%;
+    height: 25%;
+}*/
+#fullpage .bgBox .section:nth-of-type(1){
+    background: url(../image/bg1.jpg) no-repeat;
+    background-size: cover;
+}
+#fullpage .bgBox .section:nth-of-type(2){
+    background: url(../image/bg2.jpg) no-repeat;
+    background-size: cover;
+}
+#fullpage .bgBox .section:nth-of-type(3){
+    background: url(../image/bg3.jpg) no-repeat;
+    background-size: cover;
+}
+#fullpage .bgBox .section:nth-of-type(4){
+    background: url(../image/bg4.jpg) no-repeat;
+    background-size: cover;
+}
+
+.section{
+    width:100%;height:100%;
+    position:relative;
+}
+.page_one .left{
+    position:absolute;
+    top:20%;left:14%;
+    display: block;
+}
+.page_one .right{
+    position:absolute;
+    top:20%;right:14%;
+}
+@media screen and (max-width:1000px) {
+    .page_one .left{
+        display:none;
+        z-index:1;
+    }
+    .page_one .right{
+        margin:0 auto;
+        right:30%;
+        z-index:100;
+    }
+    .page_two .right{
+        display:none;
+    }
+}
+
+.page_one .right .denglu{
+    width:340px;height:300px;
+    background:#4ebffc;
+    border-radius:5px;
+    float:right;
+    margin:0 auto;
+}
+.denglu1{
+    width:299px;height:40px;
+    background:#fff;
+    margin:20px auto;
+}
+.denglu2{
+    width:299px;height:40px;
+    background:#fff;
+    margin:auto;
+}
+.denglu3{
+    width:299px;height:40px;
+    margin:20px auto;
+}
+.denglu3_left{
+    width:140px;height:38px;
+    background:#fff;
+    margin-right: 10px;
+    float:left;
+}
+.denglu3_right{
+    width:99px;height:38px;
+    background:#fff;
+    float:left;
+}
+.denglu3 a{
+    display:block;
+    width:36px;height:18px;
+    color:#fff;
+    margin:10px 0 0 10px;
+    float:left;
+    font-size:12px;
+}
+.denglu4{
+    width:299px;height:40px;
+    background:#ffd850;
+    margin:20px auto;
+    text-align: center;line-height:40px;
+}
+.denglu4 a{
+    font-size: 18px;
+}
+.denglu5{
+    width:299px;height:15px;
+    margin:auto;
+}
+.denglu5 a{
+    font-size:12px;color:#fff;
+}
+.denglu5 a:nth-of-type(1){
+    float:left;
+}
+.denglu5 a:nth-of-type(2){
+    float:right;
+}
+
+
+
+.fist_bottom{
+    width:100%;height:120px;
+    background: rgba(32, 77, 255, 0.7);
+    position:absolute;
+    left:0;bottom:0;
+}
+.chuan{
+    position:absolute;
+    left:22%;top:-191px;
+    transition:all 1s ease;
+    z-index: 10;
+}
+.bing1{
+    position:absolute;
+    left:0;top:-50px;
+}
+.bing2{
+    position:absolute;
+    right:50px;top:-47px;
+}
+.xia{
+    position:absolute;
+    left:48%;top:50%;
+    animation:xia 0.5s ease infinite alternate;
+    cursor:pointer;
+}
+.yun1{
+    position:absolute;
+    left:0;top:10%;
+    width:100%;height:400px;
+    background:url(../image/yun.png);
+    animation:yun 100s cubic-bezier(1,1,1,1) infinite;
+}
+.yun2{
+    position:absolute;
+    left:200px;top:-30%;
+    width:100%;height:400px;
+    background:url(../image/yun.png);
+    animation:yun 100s cubic-bezier(1,1,1,1) infinite;
+    transform:scale(2,2);
+}
+.yun3{
+    position:absolute;
+    left:600px;top:-10%;
+    width:100%;height:400px;
+    background:url(../image/yun.png);
+    animation:yun 100s cubic-bezier(1,1,1,1) infinite;
+    transform:scale(2,2);
+}
+.yun4{
+    position:absolute;
+    left:400px;top:30%;
+    width:100%;height:400px;
+    background:url(../image/yun.png);
+    animation:yun 100s cubic-bezier(1,1,1,1) infinite;
+}
+.airplane{
+    position:absolute;
+    left:60%;top:0;
+    animation:airplane 1.5s ease infinite alternate;
+}
+
+.page_two .left .textZQ{
+    position:absolute;
+    top:35%;left:15%;
+    margin-left:-80px;
+    opacity:0.1;
+    transition:all 1s ease;
+    animation:xuanzhuan 3s ease 3s infinite;
+}
+.page_two .left .zhuanyeBJ{
+    position:absolute;
+    top:25%;left:12%;
+    margin-left:-80px;
+    opacity:0.1;
+    transition:all 1s ease;
+}
+.page_two .left p:nth-of-type(1){
+    position:absolute;
+    top:37%;left:20%;
+    font-size:34px;
+    color:#fff;
+    transition:all 1s ease;
+}
+.page_two .left p:nth-of-type(2){
+    position:absolute;
+    top:45%;left:20%;
+    width:345px;
+    font-size:18px;
+    color: #dadada;
+    transition:all 1s ease;
+}
+.page_two .right img{
+    position:absolute;
+    top:20%;right:10%;
+    opacity:0.1;
+    transition:all 1s ease;
+}
+.two_bottom{
+    width:100%;height:120px;
+    position:absolute;
+    left:0;bottom:0;
+}
+.two_bottom_box{
+    width:1000px;height:100%;
+    margin:0 auto;
+    position:relative;
+}
+.fangkuai1{
+    width:88px;height:88px;
+    background:#4ac179;
+    position:absolute;
+    left:158px;
+    bottom:0;
+}
+.fangkuai2{
+    width:44px;height:44px;
+    background:#35b568;
+    position:absolute;
+    left:70px;
+    bottom:0;
+}
+.fangkuai3{
+    width:44px;height:44px;
+    background:#8ae75a;
+    position:absolute;
+    left:246px;
+    bottom:0;
+}
+.fangkuai4{
+    width:44px;height:44px;
+    background:#8ae75a;
+    position:absolute;
+    right:328px;
+    bottom:0;
+}
+.fangkuai5{
+    width:44px;height:44px;
+    background:#35b568;
+    position:absolute;
+    right:240px;
+    bottom:0;
+}
+
+.two_bottom_box img{
+    position:absolute;
+    left:0;bottom:0;
+}
+
+
+
+
+
+
+
+
+
+/*导航*/
+.nav_box{
+    width: 100%;
+    height: 60px;
+    background: #168bd8;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 1;
+}
+.nav{
+    width: 1000px;
+    height: 60px;
+    margin: 0 auto;
+    position: relative;
+}
+.bgBox{
+    transition:all 1s ease;
+}
+.nav_left{
+    width: 480px;
+    height: 100%;
+    float: left;
+}
+.logo{
+    display: block;
+    width: 120px;
+    height: 60px;
+    padding-top: 10px;
+    overflow: hidden;
+    float: left;
+}
+.nav .nav_1{
+    width:300px;
+    height: 60px;
+    margin-left: 60px;
+    float: left;
+}
+.nav .nav_1 li{
+    width: 100px;
+    height: 100%;
+    padding-top: 25px;
+    float: left;
+    text-align: center;
+    line-height:35px;
+
+}
+.nav .nav_1 li a{
+    font-size: 15px;
+    color:#fff;
+}
+.nav .nav_1 li a:hover{
+    color:#67cbff;
+}
+.nav .nav_2{
+    width: 340px;
+    height: 60px;
+    padding-top: 30px;
+    float: right;
+}
+.nav .nav_2 li{
+    width:70px;
+    height:16px;
+    float: right;
+    text-align: center;
+    line-height: 30px;
+
+}
+.nav .nav_2 li:nth-of-type(4){
+    width: 128px;
+    height: 28px;
+    float: right;
+    position: relative;
+    margin-top: -5px;
+    overflow: hidden;
+
+}
+.nav .nav_2 li:nth-of-type(4) a{
+    display: block;
+    margin-top: 5px;
+}
+.nav .nav_2 li:nth-of-type(4) img{
+    position: absolute;
+    left:5px;
+    top:-152px;
+
+}
+.nav .nav_2 li a{
+    font-size: 12px;
+    color: #fff;
+}
+.nav .nav_2 li:nth-of-type(1) a{
+    font-size: 12px;
+    color: #FFDA28;
+}
+.erweima{
+    width:319px;
+    height: 243px;
+    border-radius: 5px;
+    position: fixed;
+    left: 750px;
+    top:210px;
+    display: none;
+}
+
+.big{
+    display:none;
+}
+.small{
+    display:block;
+}
+@media screen and (min-width:1000px) {
+    .big{
+        display:block;
+    }
+    .small{
+        display:none;
+    }
+}
+
+.small_left{
+    float:left;
+    margin-left:20px;
+}
+.small_right{
+    float:right;
+    margin-right:20px;
+    cursor:pointer;
+}
+.small_right_one{
+    width:20px;height:1px;
+    background:#fff;
+    margin-top: 25px;
+    transition:transform 0.7s ease;
+}
+.small_right_two{
+    width:20px;height:1px;
+    background:#fff;
+    margin-top: 13px;
+    transition:transform 0.7s ease;
+}
+
+.menu{
+    width:100%;height:0;
+    background:rgba(0,0,0,0.8);
+    position:absolute;
+    left:0;top:60px;
+    transition:height 1s ease;
+    visibility:hidden;
+}
+.menu li{
+    width:100%;height:40px;
+    border-bottom:1px solid #333;
+    text-align: center;
+    line-height:40px;
+    transition:transform 1s ease;
+    transform:scale(1,0.3);
+    visibility:hidden;
+}
+.menu li a{
+    color:#ffffff;
+}
+
+
+
+#myMenu{
+    position:fixed;
+    right:30px;top:40%;
+    z-index:100;
+}
+#myMenu li a{
+    display:block;
+    width:10px;height:10px;
+    background: rgba(255, 255, 255, 0.2);
+    border:1px solid #3c3c3c;
+    border-radius:50%;
+    margin-top:10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
